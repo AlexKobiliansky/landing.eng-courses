@@ -4,6 +4,12 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
+  .title
+    font-size: 52px
+
+  .cost-table
+    font-size: 20px
+
   .free-course
     font-size: 36px
     span
@@ -23,6 +29,16 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
+  .s-cost
+    .title
+      margin-bottom: 0
+
+  .cost-table
+    font-size: 18px
+    th:last-child, td:last-child
+      padding-right: 0
+
+
   .s-intro
     .h1
       font-size: 34px
@@ -50,6 +66,15 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
 
+  .cost-table
+    th:first-child, td:first-child
+     padding-left: 20px
+    th:last-child, td:last-child
+      padding-right: 20px
+
+  .title
+    font-size: 40px
+
   .s-intro
     .h1
       text-align: center
@@ -76,7 +101,18 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 
+  .title
+    font-size: 32px
+
+  .cost-table
+    font-size: 14px
+    th:first-child, td:first-child
+      padding-left: 5px
+    th:last-child, td:last-child
+      padding-right: 5px
+
   .s-intro
+    padding-bottom: 50px
     .h1
       text-align: center
       font-size: 36px
@@ -150,12 +186,13 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px)
-	/**/
+    /**/
 
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px)
-	/**/
+  .tablesaw-advance
+    display: none
 
 
 /* Large Devices, Wide Screens */
