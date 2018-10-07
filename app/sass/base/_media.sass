@@ -4,7 +4,13 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	/**/
+  .top-line
+    .top-line-wrap
+      display: flex
+      justify-content: space-between
+      align-items: center
+    .head-callback
+      float: none
 
 
 /* Medium Devices, Desktops */
@@ -14,12 +20,45 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	/**/
-
+  .top-line
+    .logo
+      margin-left: 30px
+      margin-right: 30px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
+  .mmlogo
+    padding: 20px 20px 20px 20px!important
+
+  .mm-wrapper_opening .mm-menu_fx-listitems-slide .mm-panel_opened .mm-listitem
+    font-size: 16px
+
+  .top-line
+    .top-line-wrap
+      display: block
+    .toggle-mnu
+      float: left
+    .logo
+      margin-right: 0
+      display: inline-block
+      width: calc(100% - 60px)
+      img
+        display: inline-block
+        width: 100%
+    .head-callback
+      margin: 20px auto 0
+      width: 100%
+      .phone
+        text-align: center
+        font-size: 30px
+        margin-bottom: 10px
+      .btn
+        width: 100%
+        padding-top: 10px
+        padding-bottom: 10px
+        font-size: 16px
+  .toggle-mnu
+    margin-top: 8px
 
 
 /* Custom, iPhone Retina */
