@@ -68,18 +68,69 @@ $(document).ready(function() {
         }
     });
 
+    $(".main-mnu a").mPageScroll2id();
+
+    $(function() {
+        $("a[href='#popup-form']").magnificPopup({
+            type: "inline",
+            fixedContentPos: !1,
+            fixedBgPos: !0,
+            overflowY: "auto",
+            closeBtnInside: !0,
+            preloader: !1,
+            midClick: !0,
+            removalDelay: 300,
+            mainClass: "my-mfp-zoom-in"
+        })
+
+    });
+
+    ymaps.ready(function(){
+        var mapId = $('#map'),
+            attitude = mapId.data("att"),
+            longtitude = mapId.data("long"),
+            zoom = mapId.data("zoom"),
+            map = new ymaps.Map("map", {
+                center: [attitude, longtitude],
+                controls: [],
+                zoom: zoom
+            }),
+
+            myGeoObject = new ymaps.GeoObject({
+                geometry: {
+                    type: "Point",
+                    coordinates: [attitude, longtitude]
+                },
+            }, {
+                preset: 'islands#redIcon',
+            });
+
+        map.geoObjects
+            .add(myGeoObject)
+    });
+
     //E-mail Ajax Send
     $("form").submit(function() { //Change
         var th = $(this);
+        t = th.find(".btn").text();
+        th.find(".btn").prop("disabled", "disabled").addClass("disabled").text("Заявка отправлена!");
 
         $.ajax({
             type: "POST",
             url: "mail.php", //Change
             data: th.serialize()
         }).done(function() {
-
+            setTimeout(function() {
+                // Done Functions
+                th.find(".btn").removeAttr('disabled').removeClass("disabled").text(t);
+                th.trigger("reset");
+                $.magnificPopup.close();
+            }, 2000);
         });
         return false;
     });
+
+
+    $(".preloader").fadeOut(500)
 
 });

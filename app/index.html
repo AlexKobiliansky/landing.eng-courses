@@ -31,10 +31,11 @@
 	<![endif]-->
 
 	<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
-
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </head>
 
 <body>
+<div class="preloader"></div>
 <div id="page-content">
 	<!-- mobile menu -->
 	<nav id="mobile-mnu">
@@ -42,10 +43,10 @@
 			<div class="mmlogo">
 				<img src="img/logo.png" alt="alt" class="img-responsive">
 			</div>
-			<li><a href="#0">Cтоимость</a></li>
-			<li><a href="#0">О студии</a></li>
-			<li><a href="#0">Отзывы</a></li>
-			<li><a href="#0">Контакты</a></li>
+			<li><a href="#s-cost">Cтоимость</a></li>
+			<li><a href="#s-about">О студии</a></li>
+			<li><a href="#s-comments">Отзывы</a></li>
+			<li><a href="#s-contacts">Контакты</a></li>
 		</ul>
 	</nav>
 	<!-- mobile menu -->
@@ -62,16 +63,16 @@
 					<!-- main menu -->
 					<nav class="main-mnu hidden-xs hidden-sm hidden-md">
 						<ul>
-							<li><a href="#0">Cтоимость</a></li>
-							<li><a href="#0">О студии</a></li>
-							<li><a href="#0">Отзывы</a></li>
-							<li><a href="#0">Контакты</a></li>
+							<li><a href="#s-cost">Cтоимость</a></li>
+							<li><a href="#s-about">О студии</a></li>
+							<li><a href="#s-comments">Отзывы</a></li>
+							<li><a href="#s-contacts">Контакты</a></li>
 						</ul>
 					</nav>
 					<!-- main menu -->
 					<div class="head-callback">
 						<a href="tel:89173729442" class="phone">89173729442</a>
-						<a href="#0" class="btn">Записаться</a>
+						<a href="#popup-form" class="btn">Записаться</a>
 					</div>
 				</div>
 			</div>
@@ -106,8 +107,6 @@
 					</label>
 
 					<button type="submit" class="btn">Отправить Заявку</button>
-
-
 				</form>
 			</div>
 		</div>
@@ -115,7 +114,7 @@
 	<!-- ======= END SECTION INTRO ======= -->
 
 	<!-- ======= SECTION COST ======= -->
-	<section class="s-cost" style="background-image: url('img/bg-cost.png')">
+	<section class="s-cost" id="s-cost" style="background-image: url('img/bg-cost.png')">
 		<div class="container">
 			<div class="title">
 				Наши курсы стоимость
@@ -204,6 +203,13 @@
 				</div>
 			</div>
 			<form class="contact-form body-form">
+
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="NEXT LEVEL">
+				<input type="hidden" name="admin_email" value="alexey.kobilianskiy@gmail.com">
+				<input type="hidden" name="form_subject" value="Заявка с сайта NEXT-LEVEL">
+				<!-- END Hidden Required Fields -->
+
 				<div class="row">
 					<div class="col-md-4">
 						<label>
@@ -228,7 +234,7 @@
 	<!-- ======= END SECTION STOCK ======= -->
 
 	<!-- ======= SECTION ABOUT ======= -->
-	<section class="s-about" style="background-image: url('img/bg-about.png')">
+	<section class="s-about" id="s-about" style="background-image: url('img/bg-about.png')">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8">
@@ -330,7 +336,7 @@
 	<!-- ======= END SECTION WHY ======= -->
 
 	<!-- ======= SECTION COMMENTS ======= -->
-	<section class="s-comments">
+	<section class="s-comments" id="s-comments">
 		<div class="container">
 			<div class="title">Отзывы наших учеников</div>
 			<div class="comments-wrap">
@@ -398,7 +404,7 @@
 	<!-- ======= END SECTION COMMENTS ======= -->
 
 	<!-- ======= SECTION CONTACTS ======= -->
-	<section class="s-contacts" >
+	<section class="s-contacts" id="s-contacts">
 		<div class="container" style="background-image: url('img/bg-contacts.png')">
 			<div class="row">
 				<div class="col-sm-offset-7 col-sm-5">
@@ -425,6 +431,13 @@
 					</div>
 				</div>
 				<form class="contact-form body-form">
+
+					<!-- Hidden Required Fields -->
+					<input type="hidden" name="project_name" value="NEXT LEVEL">
+					<input type="hidden" name="admin_email" value="alexey.kobilianskiy@gmail.com">
+					<input type="hidden" name="form_subject" value="Заявка с сайта NEXT-LEVEL">
+					<!-- END Hidden Required Fields -->
+
 					<div class="row">
 						<div class="col-md-4">
 							<label>
@@ -449,14 +462,34 @@
 	</section>
 	<!-- ======= END SECTION CONTACTS ======= -->
 
+	<!-- ======= SECTION MAP ======= -->
+	<section class="s-map">
+		<div id="map" data-att="54.729897" data-long="55.971393" data-zoom="15"></div>
+	</section>
+	<!-- ======= END SECTION MAP ======= -->
 
+	<div class="hidden">
+		<form class="contact-form popup-form" id="popup-form">
+			<!-- Hidden Required Fields -->
+			<input type="hidden" name="project_name" value="NEXT LEVEL">
+			<input type="hidden" name="admin_email" value="alexey.kobilianskiy@gmail.com">
+			<input type="hidden" name="form_subject" value="Заявка с сайта NEXT-LEVEL">
+			<!-- END Hidden Required Fields -->
 
+			<h2><span>Оставьте заявку</span><br>
+			и мы свяжемся с Вами в ближайшее время</h2>
 
+			<label>
+				<input type="text" placeholder="ФИО" name="Имя" autocomplete="off" data-validation="custom" data-validation-regexp="^[a-zA-Zа-яА-Я ]{1,20}$" data-validation-error-msg="* Укажите ваше имя">
+			</label>
 
+			<label>
+				<input type="text" class="user-phone" name="Телефон" placeholder="ТЕЛ" autocomplete="off" data-validation="custom" data-validation-regexp="\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}" data-validation-error-msg="* Укажите ваш телефон">
+			</label>
 
-
-
-
+			<button type="submit" class="btn">Отправить Заявку</button>
+		</form>
+	</div>
 
 </div>
 

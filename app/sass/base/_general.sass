@@ -97,7 +97,30 @@ a, input, textarea, button
     top: -17px
     font-size: 14px
     color: $accent-red
+  .btn.disabled
+    color: #fff!important
+    background-color: $accent-red!important
+    filter: grayscale(.5)
 
+.popup-form
+  max-width: 600px
+  min-width: 320px
+  margin: 0 auto
+  border: 3px solid $accent-red
+  padding: 30px
+  font-size: 20px
+  color: $accent-dark
+  text-align: center
+  background-color: #fff
+  .help-block
+    left: 0
+  .btn
+    width: 100%
+    font-size: 24px
+  h2
+    margin-bottom: 30px
+    span
+      font-size: 24px
 
 .title
   font-size: 60px
@@ -105,5 +128,35 @@ a, input, textarea, button
   font-weight: 900
   color: $accent-dark
   text-transform: uppercase
+
+//my-mfp-zoom-in
+.my-mfp-zoom-in
+  .zoom-anim-dialog, .popup-form
+    opacity: 0
+    transition: all 0.8s ease-in-out
+    transform: scale(0.5)
+  &.mfp-ready .zoom-anim-dialog, &.mfp-ready .popup-form
+    opacity: 1
+    transform: scale(1)
+  &.mfp-removing .zoom-anim-dialog, &.mfp-removing .popup-form
+    transform: scale(0.5)
+    opacity: 0
+  &.mfp-bg
+    opacity: 0
+    transition: opacity 0.8s ease-out
+  &.mfp-ready.mfp-bg
+    opacity: .6
+  &.mfp-removing.mfp-bg
+    opacity: 0
+
+.preloader
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background: url("../img/preloader.gif") no-repeat center center #fff
+  background-size: 200px
+  z-index: 3
 
 
