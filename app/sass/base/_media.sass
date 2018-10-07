@@ -39,15 +39,26 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 
+  .why-wrap
+    padding-bottom: 0
+
+  .s-why
+    .title
+      font-size: 32px
+      line-height: 36px
+    .why-item
+      &-desc
+        font-size: 18px
+
   .s-about
     background-size: 0
   .teachers-slider
     .owl-nav
       button.owl-next
         position: relative
-        right: -42px
+        right: -30px
       button.owl-prev
-        left: -18px
+        left: -30px
   .s-stock
     font-size: 32px
     line-height: 40px
@@ -86,7 +97,6 @@
     .free-lessons
       font-size: 90px
 
-
   .adding
     font-size: 40px
 
@@ -94,6 +104,18 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
+
+  .why-wrap
+    flex-direction: column
+  .s-why
+    .title
+      text-align: center
+      margin-bottom: 30px
+      font-size: 36px
+    .why-item
+      margin-bottom: 30px
+      &-desc
+        font-size: 24px
 
   .cost-table
     th:first-child, td:first-child
@@ -129,6 +151,10 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
+
+  .s-why
+    .title
+      font-size: 32px
 
   .teachers-slider
     .owl-nav
