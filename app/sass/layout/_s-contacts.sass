@@ -1,0 +1,58 @@
+.s-contacts
+  font-size: 24px
+  font-weight: 500
+  line-height: 1.2
+  .container
+    background-repeat: no-repeat
+    background-size: 470px 440px
+    background-position: left top
+  .title
+    font-size: 48px
+    text-align: left
+    margin-bottom: 30px
+  .form-title
+    font-size: 44px
+    text-transform: uppercase
+    font-weight: 900
+    color: $accent-red
+    margin-top: 135px
+    margin-bottom: 40px
+  .contact-form
+    .btn
+      width: 100%
+      padding-top: 8px
+      padding-bottom: 8px
+      line-height: 1
+      font-size: 24px
+      font-weight: normal
+      position: relative
+
+
+.soc-wrap
+  margin-top: 40px
+  font-size: 30px
+  padding-left: 15px
+.soc-item
+  font-size: 30px
+  display: inline-block
+  margin-right: 45px
+  position: relative
+  +mt(.3s)
+  color: #0d0d0d
+  &:after
+    content: ''
+    position: absolute
+    width: 56px
+    height: 56px
+    border: 2px solid #0d0d0d
+    border-radius: 50%
+    top: -34%
+    left: -34%
+    +mt(.3s)
+  &.soc-insta
+    &:after
+      left: -57%
+  &:hover
+    color: $accent-red
+    &:after
+      border-color: $accent-red

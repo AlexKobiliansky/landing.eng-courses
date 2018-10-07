@@ -4,6 +4,14 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
+
+  .s-contacts
+    .title
+      font-size: 40px
+      margin-bottom: 20px
+    .form-title
+      font-size: 38px
+
   .s-about
     background-position: 160% 40px
   .teacher-item
@@ -38,6 +46,13 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
+
+  .s-contacts
+    font-size: 20px
+    .container
+      background-size: 400px
+    .title
+      font-size: 32px
 
   .comment-item
     &-img
@@ -118,6 +133,17 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
 
+  .s-contacts
+    margin-top: 50px
+    .container
+      background-position: right top
+      background-size: 300px
+    .form-title
+      margin-top: 70px
+    .contact-form
+      padding-left: 15px
+      padding-right: 15px
+
   .s-comments
     .title
       font-size: 34px
@@ -127,6 +153,8 @@
     margin-bottom: 30px
     &-img
       display: table-cell
+    &-content
+      padding-left: 30px
     &:nth-child(odd)
       padding-right: 15px
     &:nth-child(even)
@@ -180,11 +208,23 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 
+  .s-contacts
+    .container
+      background-image: none!important
+    .form-title
+      font-size: 28px
+      margin-bottom: 15px
+      margin-top: 30px
+    .contact-form
+      margin-bottom: 20px
+
   .comment-item
+    margin-bottom: 50px
     &-img
       display: block
       margin: 0 auto 30px
-
+    &-content
+      padding-left: 0
 
   .s-why
     .title
