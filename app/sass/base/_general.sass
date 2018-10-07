@@ -10,21 +10,21 @@
     box-sizing: border-box
 
 *::-webkit-input-placeholder
-  color: #666
+  color: #afaeae
   opacity: 1
 
 *:-moz-placeholder
-  color: #666
+  color: #afaeae
   opacity: 1
 
 
 
 *::-moz-placeholder
-  color: #666
+  color: #afaeae
   opacity: 1
 
 *:-ms-input-placeholder
-  color: #666
+  color: #afaeae
   opacity: 1
 
 body input:focus:required:invalid,
@@ -77,3 +77,24 @@ a, input, textarea, button
     color: $accent-red
     background-color: #fff
     border-color: $accent-red
+
+
+.contact-form
+  label
+    display: block
+    margin-bottom: 30px
+    line-height: 1
+    position: relative
+  input
+    width: 100%
+    font-size: 24px
+    line-height: 1
+    padding: 8px 30px
+    border: 1px solid #afaeae
+    color: #afaeae
+  .help-block
+    position: absolute
+    top: -17px
+    font-size: 14px
+    color: $accent-red
+

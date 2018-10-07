@@ -41,6 +41,12 @@ $(document).ready(function() {
      */
 
 
+    $(".user-phone").mask("+7 (999) 999-99-99",{autoclear: false});
+
+    $.validate({
+        form : '.contact-form',
+    });
+
     //E-mail Ajax Send
     $("form").submit(function() { //Change
         var th = $(this);
