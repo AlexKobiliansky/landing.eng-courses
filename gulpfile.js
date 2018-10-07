@@ -33,7 +33,8 @@ gulp.task('js', ['common-js'], function() {
         'app/libs/jquery-form-validator/form-validator/jquery.form-validator.min.js',
         'app/libs/tablesaw/tablesaw.jquery.js',
         'app/libs/tablesaw/tablesaw-init.js',
-		'app/js/common.min.js', // Всегда в конце
+        'app/libs/owl-carousel/owl.carousel.min.js',
+        'app/js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js')) // минимизируем и соединяем в один файл
 	// .pipe(uglify()) // Минимизировать весь js (на выбор)

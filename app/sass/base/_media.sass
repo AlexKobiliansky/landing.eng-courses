@@ -4,6 +4,15 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
+  .s-about
+    background-position: 160% 40px
+  .teacher-item
+    &-img
+      width: 140px
+      height: 140px
+    &-desc
+      padding-right: 40px
+
   .title
     font-size: 52px
 
@@ -30,6 +39,15 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 
+  .s-about
+    background-size: 0
+  .teachers-slider
+    .owl-nav
+      button.owl-next
+        position: relative
+        right: -42px
+      button.owl-prev
+        left: -18px
   .s-stock
     font-size: 32px
     line-height: 40px
@@ -112,6 +130,35 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 
+  .teachers-slider
+    .owl-nav
+      button.owl-next
+        position: relative
+        right: -30px
+      button.owl-prev
+        left: -30px
+
+  .teacher-item
+    &-img
+      display: block
+      margin: 0 auto 30px
+    &-content
+      display: block
+      text-align: center
+      padding-left: 0
+    &-desc
+      padding-left: 0
+      padding-right: 0
+
+
+  .s-about
+    .title
+      font-size: 36px
+      span
+        font-size: 28px
+  .teachers-title
+    font-size: 28px
+    text-align: center
   .s-stock
     font-size: 24px
     line-height: 30px

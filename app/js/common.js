@@ -47,6 +47,27 @@ $(document).ready(function() {
         form : '.contact-form',
     });
 
+    $('.teachers-slider').owlCarousel({
+        loop:true,
+        margin:30,
+        nav:true,
+        navText: ['',''],
+        mouseDrag: true,
+        autoplay: true,
+        autoplayTimeout: 15000,
+        autoplaySpeed: 700,
+        navSpeed: 700,
+        autoHeight: true,
+        responsive : {
+            0: {
+                items: 1,
+            },
+            991: {
+                items: 2
+            }
+        }
+    });
+
     //E-mail Ajax Send
     $("form").submit(function() { //Change
         var th = $(this);
