@@ -39,6 +39,19 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 
+  .comment-item
+    &-img
+      width: 140px
+      height: 140px
+      display: block
+      margin: 0 auto 30px
+    &-content
+      margin-left: 0
+    &:nth-child(odd)
+      padding-right: 30px
+    &:nth-child(even)
+      padding-left: 30px
+
   .why-wrap
     padding-bottom: 0
 
@@ -105,6 +118,21 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
 
+  .s-comments
+    .title
+      font-size: 34px
+      text-align: center
+
+  .comment-item
+    margin-bottom: 30px
+    &-img
+      display: table-cell
+    &:nth-child(odd)
+      padding-right: 15px
+    &:nth-child(even)
+      padding-left: 15px
+
+
   .why-wrap
     flex-direction: column
   .s-why
@@ -151,6 +179,12 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
+
+  .comment-item
+    &-img
+      display: block
+      margin: 0 auto 30px
+
 
   .s-why
     .title
